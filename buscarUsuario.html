@@ -1,0 +1,16 @@
+<strong>Buscar Usuario:</strong><input type="text" ng-model="buscar" class="form-control" style="width:30%"/>
+<br />
+<strong>Resultados Busqueda:</strong>
+<br />
+<table class="table" style="width:50%">
+    <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Correo</th>
+    </tr>
+    <tr ng-repeat="usuario in usuarios | BusquedaUsuario: buscar">
+        <td>{{usuario.nombre}}</td>
+        <td>{{usuario.edad}}</td>
+        <td>{{usuario.correo}}</td>
+    </tr>
+</table>

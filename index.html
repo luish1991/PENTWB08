@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+   
+   <head>
+      <title>PENTWB08</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+      <script src="https://code.angularjs.org/1.5.2/angular-route.min.js" ></script>
+      <base href="/">
+      <style>
+         #container{
+            margin-left: 30%;
+         }
+      </style>
+   </head>
+   
+   <body>
+      
+      <div ng-app = "myapp" >
+
+         <nav aria-label="breadcrumb">
+           <ol class="breadcrumb">
+             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+             <li class="breadcrumb-item active"><a href="registrar">Registrar Usuario</a></li>
+             <li class="breadcrumb-item active"><a href="verUsuarios">Ver Usuarios</a></li>
+             <li class="breadcrumb-item active"><a href="buscarUsuario">Buscar Usuario</a></li>
+           </ol>
+         </nav>
+         <br />
+         <div ng-view id="container"></div>
+         
+      </div>
+      <script src="appAngular.js"></script>
+   </body>
+</html>

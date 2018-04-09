@@ -1,0 +1,31 @@
+<form name="form" novalidate>
+  <table>
+    <tr>
+      <td>Nombre:</td>
+      <td><input type="text" name="nombre" ng-model="nombre" class="form-control" required/>
+          <span style = "color:red" ng-show = "form.nombre.$dirty && form.nombre.$invalid">
+                <span ng-show = "form.nombre.$error.required">Nombre es requerido.</span>
+         </span>
+      </td>
+    </tr>
+    <tr>
+      <td>Edad:</td>
+      <td><input type="number" name="edad" ng-model="edad" min="0" max="99" class="form-control" required/>
+       <span style = "color:red" ng-show = "form.edad.$dirty && form.edad.$invalid">
+                  <span ng-show = "form.edad.$error.required">La edad es requerida.</span>
+                  <span ng-show = "form.edad.$error.number">La edad es invalida.</span>
+       </span>
+      </td>
+    </tr>
+    <tr>
+      <td>Correo:</td>
+      <td><input type="email" name="correo" ng-model="correo" class="form-control" required/>
+              <span ng-show="form.correo.$dirty">
+                   <span style = "color:red" ng-show = "form.correo.$error.required">El correo es requerido.</span>
+                   <span style = "color:red" ng-show = "form.correo.$error.email">El correo es invalido</span>
+              </span>
+      </td>
+    </tr>
+  </table>
+ <button ng-click = "registrar()" class="btn btn-primary">Registrar</button>
+</form>
